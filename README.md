@@ -1,1 +1,1 @@
-# e-commerce_confeitaria
+# E-Commerce Confeitaria
