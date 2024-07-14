@@ -8,7 +8,7 @@
 
 ## 📖 Descrição
 
-Esse é o projeto de um e-commerce para uma confeitaria. O projeto engloba desde a parte de exposição dos produtos até a simulação da finalização de compra. Esse sistema foi desenvolvido como avaliação proposta para umas das matérias da minha graduação(Tecnologia em Sistemas para Internet).
+Este é um protótipo com o objetivo final de disponibilizar um e-commerce para confeitarias que desejam ter uma loja virtual de forma acessível e disponível tanto para web quanto para dispositivos móveis.
 
 <br/>
 
