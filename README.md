@@ -8,7 +8,7 @@
 
 ## 📖 Descrição
 
-Este é um protótipo com o objetivo final de disponibilizar um e-commerce para confeitarias que desejam ter uma loja virtual de forma acessível e disponível tanto para web quanto para dispositivos móveis.
+Este é um protótipo com o objetivo final de disponibilzar um produto white label de e-commerce para confeitarias que desejam ter uma loja virtual de forma acessível e disponível tanto para web quanto para dispositivos móveis.
 
 <br/>
 
