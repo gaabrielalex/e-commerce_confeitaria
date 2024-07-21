@@ -7,8 +7,8 @@ class SimplePageStructure extends StatelessWidget {
   final Widget child;
   const SimplePageStructure({
     required this.child,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

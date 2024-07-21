@@ -11,12 +11,12 @@ class GroupMenuListTile extends StatelessWidget {
   bool? enabled;
 
   GroupMenuListTile({
-    Key? key,
+    super.key,
     this.onTap,
     this.leadingIcon,
     required this.titleText,
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

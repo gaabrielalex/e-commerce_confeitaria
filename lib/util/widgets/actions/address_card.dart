@@ -18,7 +18,7 @@ class AddressCard extends StatelessWidget {
   final String? zipCode;
 
   AddressCard({
-    Key? key,
+    super.key,
     this.onEdit,
     this.onConfirmDelete,
     required this.addressIdentification,
@@ -29,7 +29,7 @@ class AddressCard extends StatelessWidget {
     this.city = '',
     this.stateAcronym = '',
     this.zipCode = '',
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

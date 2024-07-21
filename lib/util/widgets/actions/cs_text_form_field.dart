@@ -37,8 +37,8 @@ class CSTextFormField extends StatefulWidget {
     this.iconToggleObscureText = false,
     this.enabled,
     this.onChanged,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<CSTextFormField> createState() => _CSTextFormFieldState();

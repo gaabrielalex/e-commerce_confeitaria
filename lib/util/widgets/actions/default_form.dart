@@ -23,7 +23,7 @@ class DefaultForm extends StatefulWidget {
   final Widget? streamHasNoDataContent;
 
   const DefaultForm({
-    Key? key,
+    super.key,
     this.formKey,
     required this.title,
     this.isListing = false,
@@ -35,7 +35,7 @@ class DefaultForm extends StatefulWidget {
     this.onSave,
     this.onCancel,
     this.streamOnHasNoData,
-  }) : super(key: key);
+  });
 
   @override
   State<DefaultForm> createState() => _DefaultFormState();

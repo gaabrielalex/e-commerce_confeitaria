@@ -9,11 +9,11 @@ class GroupRadioListTile extends StatefulWidget {
   final List<void Function()?>? onTaps;
 
   GroupRadioListTile({
-    Key? key,
+    super.key,
     required this.options,
     this.currentOption = '',
     this.onTaps,
-  }) : super(key: key);
+  });
 
   @override
   State<GroupRadioListTile> createState() => _GroupRadioListTileState();

@@ -11,8 +11,8 @@ class GroupMenu extends StatelessWidget {
   const GroupMenu({
     required this.title,
     required this.tiles,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

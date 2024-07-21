@@ -14,13 +14,13 @@ class PickedImageWidget extends StatefulWidget {
     String? validateMessage;
 
   PickedImageWidget({
-    Key? key,
+    super.key,
     this.borderColor,
     this.dimension = defaultDimension,
     this.image,
     this.readImage,
     this.validateMessage,
-  }) : super(key: key);
+  });
 
   @override
   State<PickedImageWidget> createState() => _PickedImageWidgetState();

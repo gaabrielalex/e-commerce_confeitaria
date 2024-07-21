@@ -10,8 +10,8 @@ class FlexibleLine extends StatelessWidget {
   FlexibleLine({
     this.color,
     this.tickness = 0.5,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

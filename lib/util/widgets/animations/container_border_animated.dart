@@ -6,8 +6,8 @@ class ContainerBorderAnimated extends StatefulWidget {
 
   const ContainerBorderAnimated({
     required this.child,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<ContainerBorderAnimated> createState() =>

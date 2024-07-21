@@ -10,8 +10,8 @@ class Responsive extends StatelessWidget {
     this.fullScreenOption = false,
     required this.desktop,
     required this.mobile,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   const Responsive.fullScreen({
     fullScreenOption = true,

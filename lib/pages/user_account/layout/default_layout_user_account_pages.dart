@@ -9,10 +9,10 @@ class DefaultLayoutUserAccountPages extends StatelessWidget {
   final void Function()? onPressedBackButton;
 
   const DefaultLayoutUserAccountPages({
-    Key? key,
+    super.key,
     required this.chield,
     this.onPressedBackButton,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -37,7 +37,7 @@ class DefaultFormOfProduct extends StatefulWidget {
   BooleanController? onDemand;
 
   DefaultFormOfProduct({
-    Key? key,
+    super.key,
     required this.formKey,
     required this.title,
     this.isStream = false,
@@ -53,7 +53,7 @@ class DefaultFormOfProduct extends StatefulWidget {
     this.onCancel,
     this.beforeBuildingContent,
     this.onPressedBackButton,
-  }) : super(key: key);
+  });
 
   @override
   State<DefaultFormOfProduct> createState() => _DefaultFormOfProductState();
@@ -225,8 +225,8 @@ class _DefaultFormOfProductState extends State<DefaultFormOfProduct> {
                     ),
                   ),
                   fillColor: widget.onDemand!.value 
-                      ? MaterialStateProperty.all<Color?>(CSColors.primarySwatchV1.color) 
-                      : MaterialStateProperty.all<Color?>(Colors.transparent),
+                      ? WidgetStateProperty.all<Color?>(CSColors.primarySwatchV1.color) 
+                      : WidgetStateProperty.all<Color?>(Colors.transparent),
                   value: widget.onDemand!.value,
                   onChanged: (value) {
                     setState(() {

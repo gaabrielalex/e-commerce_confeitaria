@@ -16,9 +16,9 @@ class ProductEditPage extends StatefulWidget {
   final String? productId;
 
   const ProductEditPage({
-    Key? key,
+    super.key,
     required this.productId,
-  }) : super(key: key);
+  });
 
   @override
   State<ProductEditPage> createState() => _ProductEditPageState();

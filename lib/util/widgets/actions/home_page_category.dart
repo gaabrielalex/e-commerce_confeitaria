@@ -9,12 +9,12 @@ class HomePageCategory extends StatefulWidget {
   final void Function()? onTap;
 
   const HomePageCategory({
-    Key? key,
+    super.key,
     required this.text,
     this.iconData,
     this.iconPath,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   State<HomePageCategory> createState() => _HomePageCategoryState();

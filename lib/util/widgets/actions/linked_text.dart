@@ -15,8 +15,8 @@ class LinkedText extends StatefulWidget {
     this.alignment = Alignment.center,
     this.margin = EdgeInsets.zero,
     this.hoverColorOnlyUnderline = false,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<LinkedText> createState() => _LinkedTextState();

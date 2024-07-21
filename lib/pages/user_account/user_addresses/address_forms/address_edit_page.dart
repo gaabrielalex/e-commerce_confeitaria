@@ -10,9 +10,9 @@ class AddressEditPage extends StatefulWidget {
   final String? addressId;
 
   const AddressEditPage({
-    Key? key,
+    super.key,
     required this.addressId,
-  }) : super(key: key);
+  });
 
   @override
   State<AddressEditPage> createState() => _AddressEditPageState();

@@ -18,10 +18,10 @@ class MainPage extends StatefulWidget {
   SearchPageFilterDrawer? searchPageFilterDrawer;
 
   MainPage({
-    Key? key,
+    super.key,
     this.selectedPage,
     this.searchPageFilterDrawer,
-  })  : super(key: key);
+  });
 
   @override
   State<MainPage> createState() => _MainPageState();

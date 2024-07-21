@@ -16,7 +16,7 @@ class CSDropdownButton extends StatefulWidget {
   final String? Function(String?)? validator;
 
   CSDropdownButton({
-    Key? key,
+    super.key,
     this.menuHeight = 245,
     required this.items,
     this.selectedItem,
@@ -26,7 +26,7 @@ class CSDropdownButton extends StatefulWidget {
     this.errorText,
     required this.onChanged,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   State<CSDropdownButton> createState() => _CSDropdownButtonState();

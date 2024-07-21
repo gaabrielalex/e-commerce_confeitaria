@@ -33,18 +33,22 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   const firebaseConfig = FirebaseOptions(
       apiKey: "AIzaSyDdIT113P_btm965xH5kbCfZR4rZuGRhzY",
+      authDomain: "teste-21f86.firebaseapp.com",
+      projectId: "teste-21f86",
+      storageBucket: "teste-21f86.appspot.com",
       messagingSenderId: "212010055888",
       appId: "1:212010055888:web:aa18366689008feb9e86d5",
-      projectId: "teste-21f86",
+      measurementId: "G-C4N276VVQ1"
   );
   if(kIsWeb) {
     await Firebase.initializeApp(
-      name: 'Projeto Confeitaria',
       options: firebaseConfig,
     );
   }
-  else {
-    await Firebase.initializeApp();
+  else {    
+    await Firebase.initializeApp(
+      options: firebaseConfig,
+    );
   }
   runApp(const MyApp());
 }

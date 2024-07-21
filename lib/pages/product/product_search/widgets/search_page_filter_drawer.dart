@@ -17,12 +17,12 @@ class SearchPageFilterDrawer extends StatefulWidget {
   RangeValues currentPriceRange;
 
   SearchPageFilterDrawer({
-    Key? key,
+    super.key,
     this.query = '',
     this.category = ProductCategories.todos,
     this.typesChocolate = TypesChocolate.todos,
     this.currentPriceRange = const RangeValues(minPrice, maxPrice),
-  }) : super(key: key);
+  });
 
   @override
   State<SearchPageFilterDrawer> createState() => _SearchPageFilterDrawerState();
@@ -104,7 +104,7 @@ class _SearchPageFilterDrawerState extends State<SearchPageFilterDrawer> {
               children: [
                 filterDrawerExpansionPanel(
                   isExpanded: expansionPanelsIsOpen[0],
-                  title: 'Categorias',
+                  title: 'Categoria',
                   body: GroupRadioListTile(
                     currentOption: widget.category.text,
                     options: ProductCategories.getProductCategoriesList(),

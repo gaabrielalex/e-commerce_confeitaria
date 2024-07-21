@@ -7,12 +7,12 @@ class CSOutlineButton extends StatefulWidget {
   final ButtonStyle? style;
 
   const CSOutlineButton({
-    Key? key,
+    super.key,
     this.onPressed,
     required this.text,
     this.iconPath,
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   State<CSOutlineButton> createState() => _CSOutlineButtonState();

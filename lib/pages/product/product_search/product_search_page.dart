@@ -22,12 +22,12 @@ class ProductSearchPage extends StatefulWidget {
   RangeValues currentPriceRange;
 
   ProductSearchPage({
-    Key? key,
+    super.key,
     this.query = '',
     this.category = ProductCategories.todos,
     this.typesChocolate = TypesChocolate.todos,
     this.currentPriceRange = const RangeValues(SearchPageFilterDrawer.minPrice, SearchPageFilterDrawer.maxPrice),
-  }) : super(key: key);
+  });
 
   @override
   State<ProductSearchPage> createState() => _ProductSearchPageState();
@@ -191,7 +191,7 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
                                     child: TextButton(
                                         onPressed: () => Scaffold.of(context).openEndDrawer(),
                                         style: const ButtonStyle(
-                                          minimumSize: MaterialStatePropertyAll(Size.fromHeight(45)),
+                                          minimumSize: WidgetStatePropertyAll(Size.fromHeight(45)),
                                         ),
                                         child: const Row(
                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -300,7 +300,7 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
                                     },
                                   );
                                 }
-                              ).toList(),
+                              ),
                             ],
                           );
                       }

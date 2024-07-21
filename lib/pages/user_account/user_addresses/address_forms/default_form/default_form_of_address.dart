@@ -32,7 +32,7 @@ class DefaultFormOfAddress extends StatefulWidget {
   bool? disableSaveButton;
 
   DefaultFormOfAddress({
-    Key? key,
+    super.key,
     required this.formKey,
     required this.title,
     this.isStream = false,
@@ -51,7 +51,7 @@ class DefaultFormOfAddress extends StatefulWidget {
     this.beforeValidate,
     this.beforeBuildingContent,
     this.disableSaveButton = false,
-  }) : super(key: key);
+  });
 
   @override
   State<DefaultFormOfAddress> createState() => _DefaultFormOfAddressState();

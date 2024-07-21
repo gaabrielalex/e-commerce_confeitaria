@@ -33,7 +33,7 @@ class ProductCard extends StatelessWidget {
   void Function()? onCardTap;
 
   ProductCard({
-    Key? key,
+    super.key,
     this.imageUrl,
     this.description,
     this.category,
@@ -44,7 +44,7 @@ class ProductCard extends StatelessWidget {
     this.onConfirmDisable,
     this.onConfirmEnable,
     this.onCardTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

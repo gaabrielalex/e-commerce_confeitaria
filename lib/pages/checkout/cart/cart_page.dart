@@ -143,7 +143,7 @@ class _CartPageState extends State<CartPage> {
             onPressed: null,
             text:'Calcular',
             style: ButtonStyle(
-              textStyle: MaterialStateProperty.all(
+              textStyle: WidgetStateProperty.all(
                 const TextStyle(
                   fontSize: 16,
                 ),
@@ -189,7 +189,7 @@ class _CartPageState extends State<CartPage> {
                 ),
                 cartPageDivider,
               ];
-            }).expand((element) => element).toList(),
+            }).expand((element) => element),
             Container(
               margin: const EdgeInsets.only(
                 top: pageSpacing,
@@ -197,12 +197,12 @@ class _CartPageState extends State<CartPage> {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  textStyle: MaterialStateProperty.all(
+                  textStyle: WidgetStateProperty.all(
                     const TextStyle(
                       fontSize: 16,
                     ),
                   ),
-                  fixedSize: MaterialStateProperty.all(
+                  fixedSize: WidgetStateProperty.all(
                     const Size.fromHeight(48),
                   ),
                 ),
@@ -291,7 +291,7 @@ class _CartPageState extends State<CartPage> {
                                       ),
                                     ),
                                   );
-                                }).toList(),
+                                }),
                                 Container(),
                               ],
                             ),
@@ -408,7 +408,7 @@ class _CartPageState extends State<CartPage> {
                                   children: List.generate(6, (index) => const Gap(pageSpacing))
                                 ),
                               ];
-                            }).expand((element) => element).toList(),
+                            }).expand((element) => element),
                             TableRow(
                               decoration: BoxDecoration(
                                 color: CSColors.foreground.color,
@@ -560,7 +560,7 @@ class _CartPageState extends State<CartPage> {
                               );
                             }
                           );
-                        }).toList(),
+                        }),
                         const Gap(pageSpacing * 2 + 24),
                         shippingFreightCartCard,
                         Container(

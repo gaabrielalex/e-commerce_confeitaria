@@ -106,7 +106,7 @@ class CSDarkTheme {
       tabBarTheme: TabBarTheme(
         labelColor: CSColors.primary.color,
         unselectedLabelColor: CSColors.secondaryV1.color,
-        overlayColor: MaterialStateProperty.all<Color?>(Colors.transparent),
+        overlayColor: WidgetStateProperty.all<Color?>(Colors.transparent),
         indicatorColor: CSColors.primarySwatchV1.color,
         labelStyle: TextStyle(
           fontSize: Responsive.isDesktop(context) ? 17 : 14,
@@ -172,15 +172,15 @@ class CSDarkTheme {
       ),
 
       searchBarTheme: SearchBarThemeData(
-        backgroundColor: MaterialStateProperty.all<Color?>(CSColors.primary.color),
-        overlayColor: MaterialStateProperty.all<Color?>(Colors.black.withOpacity(0.2)),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        backgroundColor: WidgetStateProperty.all<Color?>(CSColors.primary.color),
+        overlayColor: WidgetStateProperty.all<Color?>(Colors.black.withOpacity(0.2)),
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           TextStyle(
             color: CSColors.inversePrimary.color,
             fontSize: Responsive.isMobile(context) ? mobileSearchBarFontSize : desktopSearchBarFontSize,
           )
         ),
-        hintStyle: MaterialStateProperty.all<TextStyle?>(
+        hintStyle: WidgetStateProperty.all<TextStyle?>(
           TextStyle(
             color: const Color(0x73000000),
             fontSize: Responsive.isMobile(context) ? mobileSearchBarFontSize : desktopSearchBarFontSize,
@@ -199,9 +199,9 @@ class CSDarkTheme {
 
       dropdownMenuTheme: DropdownMenuThemeData(
         menuStyle: MenuStyle(
-          backgroundColor: MaterialStatePropertyAll(CSColors.background.color),
-          elevation: const MaterialStatePropertyAll(0),
-          shape: MaterialStatePropertyAll(
+          backgroundColor: WidgetStatePropertyAll(CSColors.background.color),
+          elevation: const WidgetStatePropertyAll(0),
+          shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(
               borderRadius: const BorderRadius.all(Radius.circular(8.0)),
               side: BorderSide(
@@ -217,7 +217,7 @@ class CSDarkTheme {
       //Button Themes
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
-          iconColor: MaterialStatePropertyAll(CSColors.primary.color),
+          iconColor: WidgetStatePropertyAll(CSColors.primary.color),
         )
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(

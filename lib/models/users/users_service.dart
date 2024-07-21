@@ -135,7 +135,7 @@ class UsersServices extends ChangeNotifier {
       users.password ??= await _usersCollectionRef.doc(usersId).get().then((value) => value.data()!['password']);
       await FirebaseFirestore.instance.runTransaction((transaction) async {
         transaction.update(_usersCollectionRef.doc(usersId), users.toJson());
-        await _firebaseAuth.currentUser!.updateEmail(users.email!);
+        await _firebaseAuth.currentUser!.verifyBeforeUpdateEmail(users.email!);
         currentUsers = users;
       },
       timeout: const Duration(seconds: 10), maxAttempts: 1);

@@ -10,11 +10,11 @@ class DateChooserField extends StatelessWidget {
   final String? Function(String?)? validator;
 
   const DateChooserField({
-    Key? key,
+    super.key,
     required this.controller,
     this.labelText,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

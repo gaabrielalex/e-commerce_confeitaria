@@ -9,8 +9,8 @@ class EmphasisContainer extends StatelessWidget {
   
   const EmphasisContainer({
     required this.child,
-    Key? key,
-    }): super(key: key);
+    super.key,
+    });
 
   @override
   Widget build(BuildContext context) {

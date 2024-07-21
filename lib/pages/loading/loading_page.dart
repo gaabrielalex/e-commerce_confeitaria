@@ -6,11 +6,11 @@ class LoadingPage extends StatefulWidget {
   final void Function()? onFail;
 
   const LoadingPage({
-    Key? key,
+    super.key,
     this.condition,
     this.onSucess,
     this.onFail,
-  }) : super(key: key);
+  });
 
   @override
   State<LoadingPage> createState() => _LoadingPageState();
