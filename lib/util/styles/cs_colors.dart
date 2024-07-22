@@ -16,7 +16,7 @@ enum CSColors {
   foreground(Color(0xFF232323)),
   foregroundV1(Color(0xFF282828)),
   foregroundV2(Color(0xFF333333)),
-  card(Color(0xFF191C18)),
+  card(Color(0xFF232323)),
   error(Color(0xFFE91429)),
   errorText(Color(0xFFF15E6C)),
   warning(Color(0xFFFFA42B)),
