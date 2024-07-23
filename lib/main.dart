@@ -18,7 +18,7 @@ import 'package:confeitaria_divine_cacau/util/view/view_utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:confeitaria_divine_cacau/pages/authentication/login/login_page.dart';
 import 'package:confeitaria_divine_cacau/pages/home/home_page.dart';

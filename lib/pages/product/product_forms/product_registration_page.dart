@@ -2,7 +2,7 @@
 
 import 'package:confeitaria_divine_cacau/models/product/product.dart';
 import 'package:confeitaria_divine_cacau/models/product/product_service.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/product/product_forms/default_form/default_form_of_product.dart';
 import 'package:confeitaria_divine_cacau/util/boolean_controller/boolean_controller.dart';
 import 'package:confeitaria_divine_cacau/util/picked_image/picked_image_service.dart';

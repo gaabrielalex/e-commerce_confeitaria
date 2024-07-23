@@ -1,4 +1,4 @@
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart'; 
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart'; 
 import 'package:confeitaria_divine_cacau/util/view/view_utils.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_snack_bar.dart';
 import 'package:flutter/material.dart';

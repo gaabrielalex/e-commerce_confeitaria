@@ -10,7 +10,7 @@ import 'package:confeitaria_divine_cacau/util/widgets/actions/date_chooser_field
 import 'package:confeitaria_divine_cacau/util/widgets/layouts/simple_page_structure.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_text_form_field.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/linked_text.dart';
 import 'package:gap/gap.dart';

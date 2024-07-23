@@ -2,7 +2,7 @@
 
 import 'package:confeitaria_divine_cacau/models/address/address.dart';
 import 'package:confeitaria_divine_cacau/models/address/address_service.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/user_account/layout/default_layout_user_account_pages.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_text_styles.dart';
 import 'package:confeitaria_divine_cacau/util/view/view_utils.dart';

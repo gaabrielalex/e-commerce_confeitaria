@@ -1,4 +1,4 @@
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/checkout/cart/cart_page.dart';
 import 'package:confeitaria_divine_cacau/util/responsive/responsive.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_colors.dart';

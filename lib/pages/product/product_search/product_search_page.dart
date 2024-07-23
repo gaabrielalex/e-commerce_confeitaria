@@ -3,7 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:confeitaria_divine_cacau/models/product/product.dart';
 import 'package:confeitaria_divine_cacau/models/product/product_service.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/product/product_search/widgets/search_page_filter_drawer.dart';
 import 'package:confeitaria_divine_cacau/util/responsive/responsive.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_colors.dart';

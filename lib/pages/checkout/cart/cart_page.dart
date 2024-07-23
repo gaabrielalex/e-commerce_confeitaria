@@ -5,7 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:confeitaria_divine_cacau/models/cart/cart_item.dart';
 import 'package:confeitaria_divine_cacau/models/cart/cart_service.dart';
-import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
 import 'package:confeitaria_divine_cacau/util/responsive/responsive.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_colors.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_text_styles.dart';
