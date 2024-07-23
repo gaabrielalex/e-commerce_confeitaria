@@ -49,7 +49,7 @@ class _UserPersonalDataPageState extends State<UserPersonalDataPage> {
               bool dataIsValid = _formKey.currentState!.validate();
 
               if(dataIsValid) {
-                if( await usersServices.updateUserData( usersServices.currentUsers!.id!, Users(
+                var result = await usersServices.updateUserData( usersServices.currentUsers!.id!, Users(
                   userName: _userName.text,
                   email: _email.text,
                   cpf: _cpf.text,
@@ -58,7 +58,8 @@ class _UserPersonalDataPageState extends State<UserPersonalDataPage> {
                       ? DateFormat("dd/MM/yyyy").parse(_birthday.text)
                       : null,
                   phone: _phone.text,
-                ))) {
+                ));
+                if(result.status) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     CSSnackBar(
                       text: 'Dados atualizados com sucesso!',
@@ -69,7 +70,7 @@ class _UserPersonalDataPageState extends State<UserPersonalDataPage> {
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     CSSnackBar(
-                      text: 'Erro ao atualizar os dados, tente novamente mais tarde, permanecendo o erro, entre em contato com o suporte.',
+                      text: result.message ?? 'Erro ao atualizar os dados, tente novamente mais tarde, permanecendo o erro, entre em contato com o suporte.',
                       actionType: CSSnackBarActionType.error,
                     ),
                   );
@@ -102,6 +103,8 @@ class _UserPersonalDataPageState extends State<UserPersonalDataPage> {
                     hintText: 'nome@dominio.com',
                     maxLength: 100,
                     validator: (email) => _emailErrorText,
+                    enabled: false,
+                    helperText: 'O email pode ser alterado por módulo específico.',
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
