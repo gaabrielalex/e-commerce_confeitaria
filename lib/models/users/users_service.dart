@@ -129,26 +129,27 @@ class UsersServices extends ChangeNotifier {
     }
   }
 
-  Future<bool> updateUserData(String usersId, Users users) async {
+  Future<ServicesReponse> updateUserData(String usersId, Users users) async {
     try {
       users.id ??= usersId; 
       users.password ??= await _usersCollectionRef.doc(usersId).get().then((value) => value.data()!['password']);
       await FirebaseFirestore.instance.runTransaction((transaction) async {
         transaction.update(_usersCollectionRef.doc(usersId), users.toJson());
-        await _firebaseAuth.currentUser!.verifyBeforeUpdateEmail(users.email!);
         currentUsers = users;
       },
       timeout: const Duration(seconds: 10), maxAttempts: 1);
       notifyListeners();
-      return Future.value(true);
+      return Future.value(ServicesReponse(status: true));
     } catch(e) {
       debugPrint(e.toString());
-      return Future.value(false);
+      return Future.value(ServicesReponse(status: false));
     }
   }
 
   Future<bool> deleteUser() async {
     try {
+      //Reautentica o usuário para evitar erro de "requires recent login"
+      await reauthenticate();
       await FirebaseFirestore.instance.runTransaction((transaction) async {
         transaction.delete(_usersCollectionRef.doc(currentUsers?.id));
         await _firebaseAuth.currentUser!.delete();
@@ -220,6 +221,8 @@ class UsersServices extends ChangeNotifier {
 
   Future<bool> changePassword(String newPassword) async {
     try {
+      //Reautentica o usuário para evitar erro de "requires recent login"
+      await reauthenticate();
       await _firebaseAuth.currentUser!.updatePassword(newPassword);
       await _usersCollectionRef.doc(currentUsers?.id).set({
         'password': newPassword,
@@ -230,7 +233,20 @@ class UsersServices extends ChangeNotifier {
       debugPrint(e.toString());
       return Future.value(false);
     }
-  } 
+  }
+
+  Future reauthenticate() async {
+    try {
+      await _firebaseAuth.currentUser!.reauthenticateWithCredential(
+        EmailAuthProvider.credential(
+          email: currentUsers!.email!,
+          password: currentUsers!.password!,
+        ),
+      );
+    } catch(e) {
+      debugPrint(e.toString());
+    }
+  }
 
   /* --- Validações --- */
   static const String passwordMismatchMessage = 'As senhas não coincidem.';
@@ -312,13 +328,12 @@ class UsersServices extends ChangeNotifier {
   }
 
   static String? validatePhone(String? phone) {
-    String? deformattedPhone = phone!.replaceAll(RegExp(r'[^0-9]'), '');
-    // ignore: unnecessary_null_comparison
-    if (phone == null || phone.isEmpty) {
+    String deformattedPhone = phone!.replaceAll(RegExp(r'[^0-9]'), '');
+    if(deformattedPhone.isEmpty) {
       return null;
-    } else if (deformattedPhone.length < 10 && deformattedPhone.length > 11) {
+    } else if(deformattedPhone.length == 10 || deformattedPhone.length == 11) {
+      return null;
+    }
       return 'Insira um telefone válido.';
-    } 
-    return null;
   }  
 }
