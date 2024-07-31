@@ -1,6 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/user_account/layout/default_layout_user_account_pages.dart';
 import 'package:confeitaria_divine_cacau/util/view/view_utils.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_snack_bar.dart';

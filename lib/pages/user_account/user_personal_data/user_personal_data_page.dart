@@ -2,7 +2,7 @@
 
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:confeitaria_divine_cacau/models/users/users.dart';
-import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/user_account/layout/default_layout_user_account_pages.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_dropdown_button.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_snack_bar.dart';

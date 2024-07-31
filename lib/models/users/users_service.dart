@@ -329,12 +329,14 @@ class UsersServices extends ChangeNotifier {
   }
 
   static String? validatePhone(String? phone) {
-    String deformattedPhone = phone!.replaceAll(RegExp(r'[^0-9]'), '');
-    if(deformattedPhone.isEmpty) {
-      return null;
-    } else if(deformattedPhone.length == 10 || deformattedPhone.length == 11) {
+    if(phone == null || phone.isEmpty) {
       return null;
     }
-      return 'Insira um telefone válido.';
+
+    String deformattedPhone = phone.replaceAll(RegExp(r'[^0-9]'), '');
+    if(deformattedPhone.length == 10 || deformattedPhone.length == 11) {
+      return null;
+    }
+    return 'Insira um telefone válido.';
   }  
 }

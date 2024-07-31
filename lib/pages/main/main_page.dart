@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_final_fields, must_be_immutable
 
 import 'package:confeitaria_divine_cacau/models/product/product.dart';
-import 'package:confeitaria_divine_cacau/models/users/service/users_service.dart';
+import 'package:confeitaria_divine_cacau/models/users/users_service.dart';
 import 'package:confeitaria_divine_cacau/pages/product/product_search/widgets/search_page_filter_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
