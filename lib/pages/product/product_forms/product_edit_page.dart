@@ -54,7 +54,7 @@ class _ProductEditPageState extends State<ProductEditPage> {
           quantityInStockController: _quantityInStock,
           onDemand: _onDemand,
           onPressedBackButton: () => Navigator.pop(context),
-          onCancel: () => Navigator.pushNamed(context, '/account/overview'),
+          onCancel: () => Navigator.pop(context),
           onSave: () async {
             if (productToUpdate == null) {
               return;
