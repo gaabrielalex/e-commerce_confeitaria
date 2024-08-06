@@ -11,6 +11,7 @@ import 'package:confeitaria_divine_cacau/util/responsive/responsive.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_colors.dart';
 import 'package:confeitaria_divine_cacau/util/styles/cs_text_styles.dart';
 import 'package:confeitaria_divine_cacau/util/view/view_utils.dart';
+import 'package:confeitaria_divine_cacau/util/widgets/actions/card_registro_nao_encontrado.dart';
 import 'package:confeitaria_divine_cacau/util/widgets/actions/cs_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:input_quantity/input_quantity.dart';
@@ -57,17 +58,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 } else if((!snapshot.hasData || snapshot.data == null || snapshot.data!.exists == false)) {
                   Future.delayed(const Duration(milliseconds: 2000), () {
                             setState(() {
-                              streamHasNoDataContent = Container(
-                                margin: const EdgeInsets.only(top: 64),
-                                alignment: Alignment.center,
-                                child: Text("Produto não encontrado!",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: CSColors.primary.color,
-                                    fontSize: Responsive.isDesktop(context) ? 20 : 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
+                              streamHasNoDataContent = const CardRegistroNaoEncontrado(
+                                registerName: 'Produto',
                               );
                             });
                           });

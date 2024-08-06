@@ -27,6 +27,7 @@ class DefaultFormOfProduct extends StatefulWidget {
   final void Function()? onCancel;
   final void Function(AsyncSnapshot<dynamic>)? beforeBuildingContent;
   final void Function()? onPressedBackButton;
+  final void Function()? streamOnHasNoData;
   //Improviso para não ter que criar um nova controller específica para a imagem
   final TextEditingController? imageUrl;
   final TextEditingController? descriptionController;
@@ -35,6 +36,7 @@ class DefaultFormOfProduct extends StatefulWidget {
   TextEditingController? selectedCategoryController;
   TextEditingController? selectedChocolateTypeController;
   BooleanController? onDemand;
+  final Widget? streamHasNoDataContent;
 
   DefaultFormOfProduct({
     super.key,
@@ -53,6 +55,8 @@ class DefaultFormOfProduct extends StatefulWidget {
     this.onCancel,
     this.beforeBuildingContent,
     this.onPressedBackButton,
+    this.streamOnHasNoData,
+    this.streamHasNoDataContent,
   });
 
   @override
@@ -86,6 +90,8 @@ class _DefaultFormOfProductState extends State<DefaultFormOfProduct> {
         title: widget.title,
         isStream: widget.isStream,
         stream: widget.stream,
+        streamOnHasNoData: widget.streamOnHasNoData,
+        streamHasNoDataContent: widget.streamHasNoDataContent,
         onCancel: widget.onCancel,
         onSave: () async {
           setState(() {
