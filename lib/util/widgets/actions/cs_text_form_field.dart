@@ -11,7 +11,7 @@ class CSTextFormField extends StatefulWidget {
   final TextEditingController? controller;
   final String? labelText;
   final String? hintText;
-  final String? helperText;
+  String? helperText;
   final TextInputType? keyboardType;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
@@ -21,13 +21,18 @@ class CSTextFormField extends StatefulWidget {
   bool iconToggleObscureText;
   bool? enabled;
   void Function(String)? onChanged;
+  bool disableBottomMarginDefault;
 
   CSTextFormField({
     this.controller,
     this.textFormFieldKey,
     this.labelText,
     this.hintText,
-    this.helperText,
+    //Valor padrão ser uma string vazia faz com que quando o validator
+    //for acionado, a msg de erro não vai quebrar o layout
+    //pois é com se aquele espaço já estivesse reservado
+    this.helperText = '',
+    this.disableBottomMarginDefault = false,
     this.keyboardType,
     this.inputFormatters,
     this.validator,
@@ -47,6 +52,14 @@ class CSTextFormField extends StatefulWidget {
 class _CSTextFormFieldState extends State<CSTextFormField> {
   final Icon _disabledObscureIcon = const LineIcon.eye();
   final Icon _enabledObscureIcon = const LineIcon.eyeSlash();
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.disableBottomMarginDefault && widget.helperText == '') {
+      widget.helperText = null;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

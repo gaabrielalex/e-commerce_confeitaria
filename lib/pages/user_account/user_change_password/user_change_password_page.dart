@@ -109,6 +109,7 @@ class _UserChangePasswordPageState extends State<UserChangePasswordPage> {
                         labelText: 'Senha atual',
                         obscureText: true,
                         iconToggleObscureText: true,
+                        disableBottomMarginDefault: true,
                         validator: (value) {
                           if(!UsersServices.passwordMatchesCurrentPassword(context, value!)) {
                             return 'A senha inserida está incorreta.';

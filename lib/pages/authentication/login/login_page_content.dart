@@ -13,8 +13,8 @@ import 'package:confeitaria_divine_cacau/util/widgets/layouts/flexible_line.dart
 import 'package:provider/provider.dart';
 
 class LoginPageContent extends StatefulWidget {
-  static const double width = 325;
-  static const double height = width * 1.65;
+  static const double width = 335;
+  static const double height = width * 1.80;
 
   const LoginPageContent({super.key});
 
@@ -70,6 +70,7 @@ class _LoginPageContentState extends State<LoginPageContent> {
                       labelText: 'Senha',
                       obscureText: true,
                       iconToggleObscureText: true,
+                      disableBottomMarginDefault: true,
                       validator: (password) {
                         if(password == null || password.isEmpty) {
                           return 'Por favor, insira sua senha.';
