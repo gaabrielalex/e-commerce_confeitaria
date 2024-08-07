@@ -95,7 +95,7 @@ class AccountOverviewPage extends StatelessWidget {
                   title: 'Segurança e privacidade',
                   tiles: [
                     GroupMenuListTile(
-                      onTap: () => Navigator.pushNamed(context, '/account/change_password'),
+                      onTap: () => Navigator.pushNamed(context, '/password-reset'),
                       leadingIcon: Icons.lock_outline,
                       titleText: 'Alterar Senha',
                     ),
