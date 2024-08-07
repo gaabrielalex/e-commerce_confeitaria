@@ -191,7 +191,7 @@ class _DefaultFormOfProductState extends State<DefaultFormOfProduct> {
                 selectedItem: widget.selectedChocolateTypeController!.text.isEmpty 
                     ? null
                     : widget.selectedChocolateTypeController!.text,
-                labelText: 'Tipo de chocolate',
+                labelText: 'Tipo de chocolate (Opcional)',
                 items: TypesChocolate.getTypesChocolateList(),
                 onChanged: (value) {
                   widget.selectedChocolateTypeController!.text = value!;
