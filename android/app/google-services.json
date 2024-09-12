@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212010055888",
+    "project_id": "teste-21f86",
+    "storage_bucket": "teste-21f86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212010055888:android:39e5263f6e3815759e86d5",
+        "android_client_info": {
+          "package_name": "com.example.confeitaria_divine_cacau_neww"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212010055888-rhcac5fnc742486odhpjvrpppk0033lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrwHr7JYF9_yYoynEA7kryFxSWA9S7Wh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212010055888-rhcac5fnc742486odhpjvrpppk0033lq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
