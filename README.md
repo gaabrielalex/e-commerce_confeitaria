@@ -1,14 +1,14 @@
 # E-Commerce Confeitaria
 
-## 💻 Acesso direto a aplicação
-- Web: https://gaabrielalex.github.io
-- Android: Em breve!
+Bem-vindo ao repositório do projeto **Confeitaria Divine Cacau**! Este é um **e-commerce completo** desenvolvido para atender às necessidades de uma loja fictícia chamada **Divine Cacau**, criada como parte de um projeto acadêmico. 
+
+O sistema oferece uma solução para gerenciar pedidos, clientes, produtos e muito mais, com funcionalidades avançadas como controle de usuários, autenticação, recuperação de senha e integração com serviços externos. Ele foi projetado para simular um ambiente real de e-commerce, proporcionando uma experiência prática e aplicável ao mundo profissional.
 
 <br/>
 
-## 📖 Descrição
-
-Este é um protótipo com o objetivo final de disponibilzar um produto white label de e-commerce para confeitarias que desejam ter uma loja virtual de forma acessível e disponível tanto para web quanto para dispositivos móveis.
+## 💻 Acesso direto a aplicação
+- Web: https://gaabrielalex.github.io
+- Android: Em breve!
 
 <br/>
 
@@ -40,11 +40,15 @@ Esse projeto foi desenvolvido em ambiente Windowns, utilizando a versão 10 e as
 <br/>
 
 ## 🔮 Implementações em andamento
-1. Cálculo do frete por geolocalização.
 
-2. Finalização da compra.
+1. **Cálculo do frete por geolocalização**  
+   Implementar cálculo automático de frete com base na localização do usuário, utilizando coordenadas geográficas e integração com serviços externos.
 
-3. Interface de pedidos do cliente.
+2. **Gerenciamento de itens favoritos**  
+   Funcionalidade que permite aos usuários marcar e desmarcar produtos como favoritos, facilitando o acesso rápido a itens de interesse em sessões futuras.
+
+3. **Armazenamento seguro de métodos de pagamento**  
+   Implementação de mecanismos seguros para armazenar métodos de pagamento dos usuários, garantindo conformidade com boas práticas de segurança e criptografia.
 
 <br/>
 
